@@ -12,9 +12,8 @@ export class AppComponent implements OnInit {
   public selectedCategory?: Category;
   public isMobile: boolean = true;
   public width: number = 0;
-  name = 'Angular';
   events: string[] = [];
-  opened: boolean = true;
+  opened: boolean = false
 
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 

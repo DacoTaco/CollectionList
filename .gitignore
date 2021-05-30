@@ -30,6 +30,10 @@ chrome-profiler-events*.json
 !.vscode/extensions.json
 .history/*
 
+# never commit these
+**/lib_dbase.*
+**/proxy.conf.json
+
 # misc
 /.sass-cache
 /connect.lock
