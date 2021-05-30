@@ -1,0 +1,18 @@
+<FlexContainer direction='row' wrap="wrap" justify="flex-start">
+    <FlexItem>
+        <Line></Line>
+    </FlexItem>
+    <FlexItem grow="1">
+        <FlexContainer direction='column'>
+            <div style="padding:0.5vh 0.5vw;">
+                <div *ngFor='let category of categories' style="padding:1px 0px 2px 0px;color: blue;">
+                    <a (click)="onSelectionChanged(category)">
+                        <span class="CategoryItem"></span>
+                        <span style='margin-left: 15px'>{{category.Description}}</span>     
+                    </a>
+                </div>      
+            </div>
+        </FlexContainer>
+    </FlexItem>
+    <FlexItem><Line></Line></FlexItem>
+</FlexContainer>

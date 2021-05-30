@@ -1,0 +1,15 @@
+<FlexContainer style="margin: 1vh 1vw;" direction="column" justify="flex-start">
+    <Header></Header>
+    <FlexContainer style="width: 100%; height: 100%; margin-top: 2vh;" alignItems="flex-start" justify='space-between'>
+        <FlexItem *ngIf="isMobile !== true">
+            <CategoryList [categories]='categories' (onSelectedCategory)="onSelectionChanged($event)" style="width: 150px"></CategoryList>
+        </FlexItem>
+        <FlexItem grow="1" style="margin-left: 1vw;">
+            <EntryList style="width: 100%; height: 100%;" [entries]='entries' [category]='selectedCategory'></EntryList>
+        </FlexItem>
+    </FlexContainer>
+    <FlexItem selfAlign="center" grow="1">
+        <Footer></Footer>
+        <span>test : {{width}}</span>
+    </FlexItem>
+</FlexContainer>

@@ -1,0 +1,29 @@
+<FlexContainer *ngIf="category !== undefined" direction='column' justify='space-between'>
+    <Line></Line>
+        <FlexItem grow="1"></FlexItem>
+        <FlexContainer style="padding: 1vh 1vw;" direction="column">
+            <span style="padding-bottom: 1vw; font-weight: bold;">{{category.Description}} ({{entries?.length ?? 0}})</span>
+            <table border="1" style="width:100%;">
+                <tr>
+                    <th>Name</th>
+                    <th>Box</th>
+                    <th>Info Url</th>
+                    <th>Available?</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr *ngFor='let entry of entries' onMouseOver="this.bgColor='#B4EAB6'" onMouseOut="this.bgColor='#FFFFFF'">
+                    <td>{{entry.Name}}</td>
+                    <td>{{entry.BoxName}}</td>
+                    <td>{{entry.InfoUrl}}</td>
+                    <td *ngIf="(entry.Available ?? '') === ''" align="center">
+                        <b style="color: green;">[V]</b>
+                    </td>
+                    <td *ngIf="(entry.Available ?? '') !== ''" align="center">
+                        <b style="color: red;">[X]</b>
+                    </td>
+                    <td>{{entry.Remarks}}</td>
+                </tr>
+            </table>   
+        </FlexContainer>
+    <Line></Line>
+</FlexContainer>

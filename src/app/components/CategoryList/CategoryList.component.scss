@@ -1,0 +1,37 @@
+:host
+{
+    background-color: white;
+    border-style: none solid none solid;
+    border-width: 1px;
+    border-color: black;
+
+    font-size: 12px;
+
+    flexcontainer, flexItem
+    {
+        width: inherit;
+    }
+
+    a
+    {
+        font-family: verdana, arial, helvetica;
+        font-size: 12px;
+        font-weight: normal;
+        color: blue;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    a:hover 
+    {
+        cursor: "pointer";
+        color: red;
+        border: 0px dotted #7474c9;
+        /*background-color: transparent;*/
+        background-color: #f0f0ff;
+    }
+}
+
+.CategoryItem{
+    content: url("../../../assets/gfx/point.gif");
+}

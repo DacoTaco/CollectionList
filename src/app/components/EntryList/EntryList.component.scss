@@ -1,0 +1,22 @@
+:host
+{
+    background-color: white;
+    border-style: none solid none solid;
+    border-width: 1px;
+    border-color: black;
+    height: inherit;
+    width: inherit;
+    overflow: auto;
+
+    FlexContainer{
+        max-height: inherit;
+    }
+}
+
+td
+{
+    font-family: verdana, arial, helvetica;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
