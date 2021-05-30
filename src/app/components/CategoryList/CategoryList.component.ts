@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Category, CollectionService } from 'src/app/services/CollectionService';
+import { Category } from 'src/app/services/CollectionService';
 
 @Component({
   selector: 'CategoryList',

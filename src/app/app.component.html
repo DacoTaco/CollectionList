@@ -11,16 +11,15 @@
     </FlexContainer>
     <FlexItem selfAlign="center" grow="1">
         <Footer></Footer>
+        <span style="font-size: 10px;">test : {{width}}</span>
     </FlexItem>
 </FlexContainer>
 
 <!-- Mobile Version -->
 <FlexContainer *ngIf="isMobile === true" style="margin: 1vh 1vw;" direction="column" justify="flex-start">
-    <FlexItem><Header></Header></FlexItem>
     <FlexItem style="width: 100%; height: 100%; margin-top: 2vh;">
         <mat-sidenav-container class="example-container">
-            <mat-sidenav #sidenav mode="over" [(opened)]="opened" (opened)="events.push('open!')"
-                            (closed)="events.push('close!')">
+            <mat-sidenav #sidenav mode="over" [(opened)]="opened">
                 <CategoryList [categories]='categories' (onSelectedCategory)="onSelectionChanged($event)" style="width: 150px;"></CategoryList>
             </mat-sidenav>
         
@@ -30,7 +29,7 @@
                     <p><button mat-button (click)="sidenav.toggle()">Choose Collection</button></p>
                     <EntryList style="width: 100%; height: 100%;" [entries]='entries' [category]='selectedCategory'></EntryList>
                     <Footer></Footer>
-                    <span>test : {{width}}</span>
+                    <span style="font-size: 10px;">test : {{width}}</span>
                 </FlexContainer>
             </mat-sidenav-content>
         </mat-sidenav-container>

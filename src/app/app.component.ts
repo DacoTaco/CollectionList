@@ -12,10 +12,7 @@ export class AppComponent implements OnInit {
   public selectedCategory?: Category;
   public isMobile: boolean = true;
   public width: number = 0;
-  events: string[] = [];
   opened: boolean = false
-
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 
   constructor(private collectionService: CollectionService) { }
   

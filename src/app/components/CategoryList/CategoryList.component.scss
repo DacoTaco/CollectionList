@@ -1,13 +1,13 @@
-:host, flexcontainer
+.CategoryListContainer
 {
     background-color: white;
     border-style: none solid none solid;
     border-width: 1px;
     border-color: black;
-
+    width: inherit;
     font-size: 12px;
 
-    flexcontainer, flexItem
+    flexItem
     {
         width: inherit;
     }
